@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { CV } from './components/cv/CV';
+import Education from './components/education/Education';
+import Experience from './components/experience/Experience';
+import Hero from './components/hero/Hero';
+import Language from './components/language/Language';
+import Stack from './components/stack/Stack';
 
 function App() {
+
+  const [component, setComponent] = useState("")
+  const {hero} = CV;
+  const {education} = CV;
+  const {experience} = CV;
+  const {stack} = CV;
+  const {languages} = CV;
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+    <Hero hero={hero}/>
+    <Stack stack={stack}/>
+    <div className='buttons-container'>
+    <button 
+    className="button"
+    onClick={()=>setComponent("education")}
+    >Education
+    </button>
+    <button 
+    className="button"
+    onClick={()=>setComponent("experience")}
+    >
+    Experience
+    </button>
+    <button 
+    className="button"
+    onClick={()=>setComponent("languages")}
+    >
+    Languages
+    </button>
+    </div>
+    {component === "education" && <Education education={education}/>}
+    {component === "experience" && <Experience experience={experience}/>}
+    {component === "languages" && <Language languages={languages}/>}
     </div>
   );
 }
