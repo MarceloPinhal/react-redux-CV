@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { CV } from './components/cv/CV';
 import Education from './components/education/Education';
@@ -6,6 +6,7 @@ import Experience from './components/experience/Experience';
 import Hero from './components/hero/Hero';
 import Language from './components/language/Language';
 import Stack from './components/stack/Stack';
+import { setHero } from './redux/hero/hero.action';
 
 function App() {
 
@@ -16,6 +17,9 @@ function App() {
   const {stack} = CV;
   const {languages} = CV;
 
+  useEffect(()=>{
+    setHero(hero)
+  }, [hero])
   
   return (
     <div className="app">

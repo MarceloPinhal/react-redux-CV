@@ -1,7 +1,9 @@
-import React from 'react'
-import "./Hero.css"
+import React from 'react';
+import "./Hero.css";
+import { useSelector } from 'react-redux';
 
-const Hero = ({hero}) => {
+const Hero = () => {
+  const {hero} = useSelector (state => state.hero)
   return (
     <div className='hero'>
         <img src={hero.image} alt="profile"></img>
