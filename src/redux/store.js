@@ -4,6 +4,8 @@ import { composeWithDevTools } from "redux-devtools-extension";
 // import { productsReducer } from "./products/products.reducer";
 import { heroReducer } from "./hero/hero.reducer";
 
+
+
 const rootReducer = combineReducers({
     // products: productsReducer,
     hero: heroReducer,
@@ -12,3 +14,6 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 export default store;
+
+// aqui configuramos todos os reducers. A única coisa que temos que actualizar aqui é a
+// função "combineReducers"

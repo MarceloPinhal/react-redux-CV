@@ -1,9 +1,11 @@
 import React from 'react'
+import "./Stack.css"
 
-const Stack = (stack) => {
+
+const Stack = ({stack}) => {
   return (
     <div className='stack-container'>
-       <p>let juniorNinjaStack=[{stack.stack}]</p>   
+       <p className='stack-text'>let juniorNinjaStack = [{stack}];</p>   
     </div>
   )
 }

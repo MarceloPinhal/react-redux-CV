@@ -8,6 +8,7 @@ import Language from './components/language/Language';
 import Stack from './components/stack/Stack';
 import { setHero } from './redux/hero/hero.action';
 
+
 function App() {
 
   const [component, setComponent] = useState("")
@@ -20,7 +21,7 @@ function App() {
   useEffect(()=>{
     setHero(hero)
   }, [hero])
-  
+
   return (
     <div className="app">
     <Hero hero={hero}/>

@@ -1,11 +1,18 @@
+import profile from "../cv/profile.png"
+import gitHub from "../cv/GitHub.png"
+import linkedin from "../cv/LinkedIn.png"
+
+
 export const CV = {
     hero: {
-      name: "Marcelo",
+      name: "Marcelo Pinhal",
       adress: "European Union",
       email: "mpinhal92@gmail.com",
-      image: "https://i.imgur.com/ZQAkED3.png",
-      gitHub: "https://github.com/MarceloPinhal",
-      aboutMe: "Passionate about coding and outdoor sports."
+      image: profile,
+      gitHub: gitHub,
+      linkedin: linkedin,
+      aboutMe: "Passionate about coding and outdoor sports.",
+      catchPhrase: "Stay Hungry, Stay Foolish!"
     },
 
     education: [
@@ -32,12 +39,12 @@ export const CV = {
       },
       {
         name: "Account Executive",
-        where: "Stark Industries",
+        where: "Inovretail",
         description:
           "Inovretail provides data science and digital tools (SAAS) that deliver quantifiable insights and actionable recommendations with a direct and sustainable impact on retailers."
       },
       {
-        name: "Account Executive",
+        name: "Account Manager",
         where: "Boca do Lobo",
         description:
           "Boca do Lobo's emotional pieces are handmade in Portugal by talented artisans who use their wisdom to combine traditional manufacturing techniques with the latest technological methods."

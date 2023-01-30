@@ -1,15 +1,15 @@
 import React from 'react'
+import "./Experience.css"
 
 const Experience = ({experience}) => {
     return (
-      <div className="education-card">
-      <h3>Experience</h3>
+      <div className="experience-card">
         {experience.map((item) => {
           return (
-            <div key={JSON.stringify(item)}>
-              <p className="education-tittle">What: {item.name}</p>
-              <p className="education-element">Where: {item.where}</p>
-              <p className="education-element">Description: {item.description}</p>
+            <div key={JSON.stringify(item)} className="experience-elements">
+              <p className="education-tittle"><strong>What:</strong> {item.name}</p>
+              <p className="education-element"><strong>Where:</strong> {item.where}</p>
+              <p className="education-element"><strong>Description:</strong> {item.description}</p>
             </div>
           );
         })}
